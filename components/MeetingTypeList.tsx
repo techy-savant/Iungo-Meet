@@ -173,8 +173,10 @@ const MeetingTypeList = () => {
         title="Paste Meeting Link Here 👇🏻"
         className="text-center"
         buttonText="Join Meeting"
-        handleClick={() => router.push(`http://${values.link}`)} //When deployed remove this http://
+        handleClick={() => router.push(values.link)}
       >
+        {" "}
+        //for localhost you need to append http:// before values.link
         <Input
           placeholder="Meeting Link"
           className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
