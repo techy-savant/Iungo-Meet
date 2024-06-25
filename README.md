@@ -1,9 +1,9 @@
+
 <div align="center">
   <br />
     <a href="https://youtu.be/R8CIO1DZ2b8" target="_blank">
-      <img src="https://github.com/adrianhajdin/zoom-clone/assets/67959015/f09a8421-67d3-45ce-b9bc-a791cdc2774b" alt="Project Banner">
+      <img src="https://github.com/techy-savant/IUNGO---Video-Conferencing-SaaS/assets/108519575/889f76cb-ccf1-48a2-a688-fa945e86d6ae" alt="Project Banner">
     </a>
-  
   <br />
 
   <div>
