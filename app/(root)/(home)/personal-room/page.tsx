@@ -54,30 +54,32 @@ const PersonalRoom = () => {
     <section className="flex size-full flex-col gap-10 text-white">
       <h1 className="text-3xl font-bold">Personal Room</h1>
 
-      <div className="flex w-full flex-col gap-8 xl:max-w-[900px] ">
-        <Table
-          title="Topic"
-          description={`${user?.username
-            ?.charAt(0)
-            .toUpperCase()}${user?.username?.slice(1)}'s Meeting Room`}
-        />
-        <Table title="Meeting ID" description={meetingId!} />
-        <Table title="Invite Link" description={meetingLink} />
-      </div>
+      <div className="flex flex-col gap-8 w-full py-6 px-4 border-4 border-dashed border-green-2 rounded-lg">
+        <div className="flex w-full flex-col gap-8 xl:max-w-[900px] ">
+          <Table
+            title="Topic"
+            description={`${user?.username
+              ?.charAt(0)
+              .toUpperCase()}${user?.username?.slice(1)}'s Meeting Room`}
+          />
+          <Table title="Meeting ID" description={meetingId!} />
+          <Table title="Invite Link" description={meetingLink} />
+        </div>
 
-      <div className="flex gap-5">
-        <Button className="bg-blue-1" onClick={startRoom}>
-          Start Meeting
-        </Button>
-        <Button
-          className="bg-dark-3"
-          onClick={() => {
-            navigator.clipboard.writeText(meetingLink);
-            toast({ title: "Link copied" });
-          }}
-        >
-          Copy Invitation
-        </Button>
+        <div className="flex gap-5">
+          <Button className="bg-green-1" onClick={startRoom}>
+            Start Meeting
+          </Button>
+          <Button
+            className="bg-green-2"
+            onClick={() => {
+              navigator.clipboard.writeText(meetingLink);
+              toast({ title: "Link copied" });
+            }}
+          >
+            Copy Invitation
+          </Button>
+        </div>
       </div>
     </section>
   );
