@@ -174,7 +174,7 @@ const MeetingTypeList = () => {
         className="text-center"
         buttonText="Join Meeting"
         //for localhost you need to append http:// before values.link
-        handleClick={() => router.push(values.link)}
+        handleClick={() => router.push(`http://${values.link}`)}
       >
         <Input
           placeholder="Meeting Link"
