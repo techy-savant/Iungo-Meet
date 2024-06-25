@@ -5,12 +5,12 @@ export const sidebarLinks = [
     imgUrl: "/icons/Home.svg",
   },
   {
-    label: "Upcoming",
+    label: "Future Meets",
     route: "/upcoming",
     imgUrl: "/icons/upcoming.svg",
   },
   {
-    label: "Previous",
+    label: "Past Meets",
     route: "/previous",
     imgUrl: "/icons/previous.svg",
   },
@@ -20,7 +20,7 @@ export const sidebarLinks = [
     imgUrl: "/icons/Video.svg",
   },
   {
-    label: "Personal Room",
+    label: "My Space",
     route: "/personal-room",
     imgUrl: "/icons/add-personal.svg",
   },
