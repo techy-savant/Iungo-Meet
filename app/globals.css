@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+/* custom font */
+@font-face {
+  font-family: "Phonk";
+  src: url("../fonts/phonkContrast.otf") format("otf"),
+  url("../fonts/phonkRegular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ======== stream css overrides ======== */
 .str-video__call-stats {
   max-width: 500px;
@@ -54,8 +63,11 @@
 }
 
 /* ==== clerk class override ===== */
+.cl-card {
+  border-radius: 20px;
+}
 
-.cl-providerIcon__github{
+.cl-providerIcon__github {
   filter: invert(1);
 }
 
@@ -72,7 +84,16 @@
 }
 
 .cl-socialButtonsIconButton {
+  padding: none;
+  width: fit-content;
+  margin: 0 auto;
   border: 3px solid #565761;
+  transition: all 0.5s ease-in;
+}
+
+.cl-socialButtonsIconButton:hover {
+  background-color: #98c9a3;
+  transform: scale(1.1);
 }
 
 .cl-internal-wkkub3 {

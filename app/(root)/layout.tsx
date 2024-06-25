@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Iungo",
   description: "Video Conferencing Suite",
   icons:{
-    icon: '/icons/logo.svg'
+    icon: '/icons/iungo.svg'
   }
 };
 
