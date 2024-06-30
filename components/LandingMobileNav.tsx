@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import { sidebarLinks } from "@/constants";
-import { usePathname } from "next/navigation";
+import { landingNavLinks, sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
-const MobileNav = () => {
-  const pathname = usePathname();
+const LandingMobileNav = () => {
+  const currentHash = window.location.hash; // Get the current window hash location
 
   return (
     <section
@@ -24,14 +24,14 @@ const MobileNav = () => {
       <Sheet>
         <SheetTrigger asChild>
           <Image
-            src='icons/hamburger.svg'
+            src="icons/hamburger2.svg"
             width={36}
             height={36}
             alt="Hamburger icon"
             className="cursor-pointer sm:hidden"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none bg-dark-1">
+        <SheetContent side="right" className="border-none bg-dark-1">
           <Link href="/" className="flex items-center gap-1">
             <Image
               src="icons/iungo.svg"
@@ -46,13 +46,13 @@ const MobileNav = () => {
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
               <section className="flex h-full flex-col gap-6 pt-16 text-white">
-                {sidebarLinks.map((link) => {
-                  const isActive = pathname === link.route;
+                {landingNavLinks.map((link) => {
+                  const isActive = currentHash === link.href;
 
                   return (
-                    <SheetClose asChild key={link.route}>
+                    <SheetClose asChild key={link.href}>
                       <Link
-                        href={link.route}
+                        href={link.href}
                         key={link.label}
                         className={cn(
                           "flex gap-4 items-center p-4 rounded-lg w-full",
@@ -61,12 +61,6 @@ const MobileNav = () => {
                           }
                         )}
                       >
-                        <Image
-                          src={link.imgUrl}
-                          alt={link.label}
-                          width={20}
-                          height={20}
-                        />
                         <p className="font-semibold">{link.label}</p>
                       </Link>
                     </SheetClose>
@@ -81,4 +75,4 @@ const MobileNav = () => {
   );
 };
 
-export default MobileNav;
+export default LandingMobileNav;

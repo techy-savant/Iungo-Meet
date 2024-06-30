@@ -26,12 +26,9 @@ export const sidebarLinks = [
   },
 ];
 
-
-
-export const avatarImages = [
-  '/images/avatar-1.jpeg',
-  '/images/avatar-2.jpeg',
-  '/images/avatar-3.png',
-  '/images/avatar-4.png',
-  '/images/avatar-5.png',
+export const landingNavLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#features", label: "Features" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
 ];
