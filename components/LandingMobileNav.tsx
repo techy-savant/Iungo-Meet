@@ -13,14 +13,21 @@ import { landingNavLinks, sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import { useClerk } from "@clerk/nextjs";
 
 const LandingMobileNav = () => {
+  const clerk = useClerk();
+
   const [currentHash, setCurrentHash] = useState("");
 
   useEffect(() => {
     setCurrentHash(window.location.hash); // Get the current window hash location
   }, []);
 
+  const handleLinkClick = (hash: string) => {
+    setCurrentHash(hash);
+  };
 
   return (
     <section
@@ -66,12 +73,31 @@ const LandingMobileNav = () => {
                             "bg-green-1": isActive,
                           }
                         )}
+                        onClick={() => handleLinkClick(link.href)}
                       >
                         <p className="font-semibold">{link.label}</p>
                       </Link>
                     </SheetClose>
                   );
                 })}
+                <div className=" flex flex-wrap gap-2 m-4">
+                  <Button
+                    className="  flex-1  bg-dark-3 text-white rounded-lg text-base py-3 h-fit ease-in duration-75 hover:bg-green-1"
+                    onClick={() => {
+                      clerk.redirectToSignIn();
+                    }}
+                  >
+                    Log Into Iungo
+                  </Button>
+                  <Button
+                    className="  flex-1 bg-dark-3 text-white rounded-lg text-base py-3 h-fit ease-in duration-75 hover:bg-green-1"
+                    onClick={() => {
+                      clerk.redirectToSignUp();
+                    }}
+                  >
+                    Get Started For Free
+                  </Button>
+                </div>
               </section>
             </SheetClose>
           </div>
