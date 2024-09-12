@@ -40,7 +40,7 @@ const Navbar = () => {
       <ul className=" flex flex-center gap-3 max-sm:hidden">
         {landingNavLinks.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="text-base text-gray-1 font-[300]">
+            <a href={link.href} className="text-base text-gray-1 font-normal">
               {link.label}
             </a>
           </li>

@@ -16,29 +16,29 @@ const LandingPage = () => {
   const router = useRouter();
   const { user, isSignedIn } = useUser();
 
-  // if (user && isSignedIn) {
-  //   toast({ title: "User is Signed In, Redirecting to Dashboard...", duration: 1000 });
-  //   return router.push("/dashboard");
-  // }
+  if (user && isSignedIn) {
+    // toast({ title: "User is Signed In, Redirecting to Dashboard...", duration: 1000 });
+    return router.push("/dashboard");
+  }
 
   return (
     <>
-      <section className="padding bg-green-1">
+      <section className=" sm:px-16 px-8 py-12 bg-white" id="home">
         <LandingHome />
       </section>
-      <section className="padding bg-blue-200">
+      <section className="padding bg-blue-200" id="about">
         <About />
       </section>
 
-      <section className="padding bg-white">
+      <section className="padding bg-white" id="features">
         <Features />
       </section>
 
-      <section className="padding bg-red-1 ">
+      <section className="padding bg-red-1" id="pricing">
         <Pricing />
       </section>
 
-      <section className="padding-x sm:py-32 py-16 w-full">
+      <section className="padding-x sm:py-32 py-16 w-full" id="fq">
         <Faq />
       </section>
       <section className="bg-[#2e2f33] padding-x sm:py-20 py-12 ">

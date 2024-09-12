@@ -6,22 +6,22 @@ export const sidebarLinks = [
   },
   {
     label: "Future Meets",
-    route: "/upcoming",
+    route: "/dashboard/upcoming",
     imgUrl: "/icons/upcoming.svg",
   },
   {
     label: "Past Meets",
-    route: "/previous",
+    route: "/dashboard/previous",
     imgUrl: "/icons/previous.svg",
   },
   {
     label: "Recordings",
-    route: "/recordings",
+    route: "/dashboard/recordings",
     imgUrl: "/icons/Video.svg",
   },
   {
     label: "My Space",
-    route: "/personal-room",
+    route: "/dashboard/personal-room",
     imgUrl: "/icons/add-personal.svg",
   },
 ];

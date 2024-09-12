@@ -11,10 +11,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { landingNavLinks, sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const LandingMobileNav = () => {
-  const currentHash = window.location.hash; // Get the current window hash location
+  const [currentHash, setCurrentHash] = useState("");
+
+  useEffect(() => {
+    setCurrentHash(window.location.hash); // Get the current window hash location
+  }, []);
+
 
   return (
     <section
