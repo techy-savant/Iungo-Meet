@@ -47,9 +47,9 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="flex-between gap-4">
+      <div className="flex gap-2">
         <Button
-          className=" bg-transparent text-gray-1 px-0 max-sm:hidden"
+          className=" bg-transparent text-gray-1 py-2 px-0 h-fit w-[100px] lg:w-[150px] ease-in duration-300 hover:bg-gray-3 hover:text-dark-3 max-sm:hidden"
           onClick={() => {
             clerk.redirectToSignIn();
           }}
@@ -57,14 +57,14 @@ const Navbar = () => {
           Sign In
         </Button>
         <Button
-          className=" bg-dark-3 text-white py-2 h-fit max-sm:hidden"
+          className=" bg-dark-3 text-white py-2 px-0 h-fit w-[100px] lg:w-[150px] ease-in duration-300 hover:opacity-90 max-sm:hidden"
           onClick={() => {
             clerk.redirectToSignUp();
           }}
         >
           Get Started
         </Button>
-        <LandingMobileNav  />
+        <LandingMobileNav />
       </div>
     </nav>
   );

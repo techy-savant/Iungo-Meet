@@ -28,6 +28,7 @@ export const sidebarLinks = [
 
 export const landingNavLinks = [
   { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
   { href: "#features", label: "Features" },
   { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "FAQ" },

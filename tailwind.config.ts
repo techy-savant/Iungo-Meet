@@ -54,6 +54,8 @@ const config = {
         },
         gray: {
           1: "#7d7d7d",
+          2: "#fafafa",
+          3: "#f5f5f5",
         },
       },
       keyframes: {

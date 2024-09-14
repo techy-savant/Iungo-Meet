@@ -26,11 +26,11 @@ const LandingPage = () => {
       <section className=" sm:px-16 px-8 py-12 bg-white" id="home">
         <LandingHome />
       </section>
-      <section className="padding bg-blue-200" id="about">
+      <section className="sm:px-16 px-8 py-12 bg-gray-2" id="about">
         <About />
       </section>
 
-      <section className="padding bg-white" id="features">
+      <section className="sm:px-16 px-8 py-12 bg-white" id="features">
         <Features />
       </section>
 

@@ -146,7 +146,7 @@ const LandingHome = () => {
           Log Into Iungo
         </Button>
         <Button
-          className=" w-[200px]  sm:w-[300px] bg-dark-3 text-white rounded-lg text-base py-3 h-fit"
+          className=" w-[200px]  sm:w-[300px] bg-dark-3 text-white rounded-lg text-base py-3 h-fit ease-in duration-300 hover:opacity-90"
           onClick={() => {
             clerk.redirectToSignUp();
           }}

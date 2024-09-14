@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +16,7 @@
 @font-face {
   font-family: "Phonk";
   src: url("../fonts/phonkContrast.otf") format("otf"),
-  url("../fonts/phonkRegular.otf") format("otf");
+    url("../fonts/phonkRegular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }

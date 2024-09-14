@@ -31,7 +31,7 @@ const LandingMobileNav = () => {
 
   return (
     <section
-      className="w-full max-w-[264px] 
+      className="w-full max-w-[264px] sm:hidden
     "
     >
       <Sheet>
