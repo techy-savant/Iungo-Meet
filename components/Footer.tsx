@@ -11,7 +11,8 @@ const Footer = () => {
         <HeartHandshake className="size-6 max-xs:size-4 text-green-1 pr-0.5" />
         <span className=" pr-0.5">By </span>
         <Link
-          href="/"
+          href="https://techysavant.site"
+          target="_blank"
           className="flex flex-row items-center gap-0.5 duration-200 ease-in group"
         >
           <span className="font-semibold text-white group-hover:underline">

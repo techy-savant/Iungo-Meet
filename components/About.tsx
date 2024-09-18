@@ -49,22 +49,22 @@ const About = () => {
 
       <div className=" flex gap-3 flex-wrap justify-center items-center w-full">
         {aboutsData.map(({ title, description, Icon, color }: aboutsType) => (
-          <Card className="flex flex-col items-start m-4 max-sm:min-h-[80px] max-w-[180px] lg:max-w-[350px]  gap-1 p-2 border-none flex-1">
+          <Card key={title} className="flex flex-col items-start m-4 max-sm:min-h-[80px] max-w-[180px] lg:max-w-[350px]  gap-1 p-2 border-none flex-1">
             <CardHeader className="flex flex-col gap-1 items-start px-4 pt-4 pb-0 ">
               <div
                 className={cn(
                   " rounded-md p-3 bg-yellow-1 opacity-[80%] flex justify-center items-left", color && `${color}`
                 )}
               >
-                <PieChart className="size-5" />
+                <Icon className="size-5" />
               </div>
               <p className="text-sm sm:text-base font-medium leading-none ">
-                Collaboration
+                {title}
               </p>
             </CardHeader>
             <CardContent className=" px-4 pt-0 pb-3">
               <p className="text-left text-sm max-lg:[10px] text-gray-1">
-                Share screens, collaborate and get stuff done.
+                {description}
               </p>
             </CardContent>
           </Card>

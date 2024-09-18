@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
-}
-
-/* Hide scrollbar  */
-.no-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +12,7 @@ html {
 @font-face {
   font-family: "Phonk";
   src: url("../fonts/phonkContrast.otf") format("otf"),
-    url("../fonts/phonkRegular.otf") format("otf");
+  url("../fonts/phonkRegular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
@@ -124,34 +112,6 @@ html {
 
   .flex-between {
     @apply flex justify-between items-center;
-  }
-
-  .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
-  }
-
-  .padding-x {
-    @apply sm:px-16 px-8;
-  }
-
-  .padding-y {
-    @apply sm:py-24 py-12;
-  }
-
-  .padding-l {
-    @apply sm:pl-16 pl-8;
-  }
-
-  .padding-r {
-    @apply sm:pr-16 pr-8;
-  }
-
-  .padding-t {
-    @apply sm:pt-24 pt-12;
-  }
-
-  .padding-b {
-    @apply sm:pb-24 pb-12;
   }
 }
 
