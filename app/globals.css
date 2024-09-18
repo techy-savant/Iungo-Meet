@@ -4,7 +4,15 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: 0;
 }
+
+/* Hide scrollbar  */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
 
 * {
   margin: 0;

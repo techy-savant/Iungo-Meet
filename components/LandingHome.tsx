@@ -18,7 +18,16 @@ import {
   Send,
   Video,
   LineChart,
+  LucideIcon,
 } from "lucide-react";
+import { HomeData } from "@/constants";
+
+interface HomeType {
+  title: string;
+  Icon: LucideIcon;
+  mainContent: string;
+  mobileContent: string;
+}
 
 const LandingHome = () => {
   const clerk = useClerk();
@@ -45,24 +54,28 @@ const LandingHome = () => {
         <span className="text-green-1">virtual meeting</span> needs.
       </p>
       <div className=" grid grid-cols-2 lg:grid-cols-4 justify-around w-full">
-        <Card className="flex flex-col items-center m-4 max-sm:min-h-[80px]">
-          <CardHeader className="flex flex-row gap-2 justify-center items-center max-sm:p-2">
-            <Send className="size-4 mt-2" />
+        {HomeData.map(
+          ({ title, Icon, mainContent, mobileContent }: HomeType) => (
+            <Card className="flex flex-col items-center m-4 max-sm:min-h-[80px]">
+              <CardHeader className="flex flex-row gap-2 justify-center items-center max-sm:p-2">
+                <Icon className="size-4 mt-2" />
 
-            <p className="text-sm sm:text-base font-medium leading-none max-sm:hidden">
-              Create Instant Meetings
-            </p>
-          </CardHeader>
-          <CardContent>
-            <p className="text-center max-sm:text-sm max-sm:hidden">
-            Start video calls with one click.
-            </p>
-            <p className=" sm:hidden text-sm font-medium leading-none text-center">
-              Create Instant Meetings
-            </p>
-          </CardContent>
-        </Card>
-        <Card className="flex flex-col items-center m-4 max-sm:h-fit">
+                <p className="text-sm sm:text-base font-medium leading-none max-sm:hidden">
+                  {title}
+                </p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center max-sm:text-sm max-sm:hidden">
+                  {mainContent}
+                </p>
+                <p className=" sm:hidden text-sm font-medium leading-none text-center">
+                  {mobileContent}
+                </p>
+              </CardContent>
+            </Card>
+          )
+        )}
+        {/* <Card className="flex flex-col items-center m-4 max-sm:h-fit">
           <CardHeader className="flex flex-row gap-2 justify-center items-center max-sm:p-2">
             <CalendarClock className="size-4 mt-2" />
 
@@ -71,7 +84,9 @@ const LandingHome = () => {
             </p>
           </CardHeader>
           <CardContent>
-            <p className="text-center max-sm:text-sm max-sm:hidden">Schedule meetings with ease</p>
+            <p className="text-center max-sm:text-sm max-sm:hidden">
+              Schedule meetings with ease
+            </p>
             <p className=" sm:hidden text-sm font-medium leading-none text-center">
               Plan & Schedule Meets
             </p>
@@ -104,37 +119,13 @@ const LandingHome = () => {
           </CardHeader>
           <CardContent>
             <p className="text-center max-sm:text-sm max-sm:hidden w-full">
-            Track and analyze meeting data.
+              Track and analyze meeting data.
             </p>
             <p className=" sm:hidden text-sm font-medium leading-none text-center">
               Gather Meeting Insights
             </p>
           </CardContent>
-        </Card>
-        {/* <div className="flex flex-col items-center m-4">
-          <span className=" text-2xl lg:text-4xl font-bold">1m</span>
-          <p className="text-center max-sm:text-sm">
-            Less than 1 minute to start a virtual space for teams
-          </p>
-        </div>
-        <div className="flex flex-col items-center m-4">
-          <span className="text-2xl lg:text-4xl font-bold">25k</span>
-          <p className="text-center max-sm:text-sm">
-            Amazing remote virtual assistants for remote teams
-          </p>
-        </div>
-        <div className="flex flex-col items-center m-4">
-          <span className="text-2xl lg:text-4xl font-bold">1:1</span>
-          <p className="text-center max-sm:text-sm">
-            All your meetings from 1:1s to standups to brainstorming
-          </p>
-        </div>
-        <div className="flex flex-col items-center m-4">
-          <span className="text-2xl lg:text-4xl font-bold">10x</span>
-          <p className="text-center max-sm:text-sm">
-            10x faster than sending a video conference link
-          </p>
-        </div> */}
+        </Card> */}
       </div>
       <div className="w-full flex flex-wrap justify-center gap-2 m-4">
         <Button

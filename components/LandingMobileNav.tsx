@@ -56,7 +56,7 @@ const LandingMobileNav = () => {
             <p className="text-[26px] font-extrabold text-white">iungo</p>
           </Link>
 
-          <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
+          <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto no-scrollbar">
             <SheetClose asChild>
               <section className="flex h-full flex-col gap-6 pt-16 text-white">
                 {landingNavLinks.map((link) => {
@@ -80,9 +80,9 @@ const LandingMobileNav = () => {
                     </SheetClose>
                   );
                 })}
-                <div className=" flex flex-wrap gap-2 m-4">
+                <div className=" flex flex-col gap-2 m-4">
                   <Button
-                    className="  flex-1  bg-dark-3 text-white rounded-lg text-base py-3 h-fit ease-in duration-75 hover:bg-green-1"
+                    className="  flex-1  bg-dark-3 text-white rounded-lg text-base py-3 h-fit ease-in duration-75 outline-none border-none hover:bg-green-1"
                     onClick={() => {
                       clerk.redirectToSignIn();
                     }}

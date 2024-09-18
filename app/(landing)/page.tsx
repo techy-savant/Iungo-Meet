@@ -34,14 +34,14 @@ const LandingPage = () => {
         <Features />
       </section>
 
-      <section className="padding bg-red-1" id="pricing">
+      <section className="sm:px-16 px-8 py-16 bg-dark-3">
         <Pricing />
       </section>
 
       <section className="padding-x sm:py-32 py-16 w-full" id="fq">
         <Faq />
       </section>
-      <section className="bg-[#2e2f33] padding-x sm:py-20 py-12 ">
+      <section className="sm:px-16 px-8 py-4 bg-dark-3" id="footer">
         <Footer />
       </section>
     </>

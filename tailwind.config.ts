@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { Rum_Raisin } from "next/font/google";
 
 const config = {
   darkMode: ["class"],
@@ -17,10 +18,14 @@ const config = {
         "2xl": "1400px",
       },
     },
-    fontFamily: {
-      phonk: ["Phonk", "sans-serif"],
-    },
     extend: {
+      fontFamily: {
+        phonk: ["Phonk", "sans-serif"],
+        rumraisin: ['"Rum Raisin"', "sans-serif"],
+      },
+      screens: {
+        xs: "550px",
+      },
       colors: {
         dark: {
           1: "#1C1F2E",
