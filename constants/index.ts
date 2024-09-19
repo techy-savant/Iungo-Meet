@@ -148,16 +148,47 @@ export const faqData = [
   {
     sn: 2,
     question: "How much does Iungo cost?",
-    answer: "Iungo is an OpenSource Product and at the moment is 100% free."
+    answer: "Iungo is an OpenSource Product and at the moment is 100% free.",
   },
   {
     sn: 3,
     question: "Is Iungo Secure?",
-    answer: "Yes. Each call is secure and well-encrypted, ensuring your conversations remain private and protected."
+    answer:
+      "Yes. Each call is secure and well-encrypted, ensuring your conversations remain private and protected.",
   },
   {
     sn: 4,
     question: "Can I record team meetings on Iungo?",
-    answer: "With Iungo you can record any meeting of your choice. Allowing you to capture every moment."
+    answer:
+      "With Iungo you can record any meeting of your choice. Allowing you to capture every moment.",
+  },
+];
+
+export const sectorsData = [
+  {
+    img: "/icons/healthcare-svg.svg",
+    title: "Healthcare",
+    content: "Provide remote medical consultation",
+    color: "bg-green-1"
+  },
+  {
+    img: "/icons/education-svg.svg",
+    title: "Education",
+    content: "Teach online and empower students",
+  },
+  {
+    img: "/icons/government-svg.svg",
+    title: "Government",
+    content: "Improve Inter-agency communication",
+  },
+  {
+    img: "/icons/bank-svg.svg",
+    title: "Banking",
+    content: "Build better customer relationships",
+  },
+  {
+    img: "/icons/it-svg.svg",
+    title: "Tech & IT",
+    content: "Enables remote team collaboration. ",
   },
 ];

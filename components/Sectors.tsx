@@ -10,6 +10,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { sectorsData } from "@/constants";
+
+interface sectorsDataType {
+  title: string;
+  content: string;
+  img: string;
+}
 
 const Sectors = () => {
   return (
@@ -31,21 +40,30 @@ const Sectors = () => {
         className="w-full md:max-w-[800px] lg:max-w-[1000px] "
       >
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {sectorsData.map(({ title, content, img }: sectorsDataType) => (
             <CarouselItem
-              key={index}
+              key={title}
               className=" basis-[70%] sm:basis-1/2 lg:basis-1/3"
             >
               <Card className="flex flex-col items-start m-4 border-none bg-gray-2 max-w-full min-h-[130px] lg:min-h-[180px] gap-1 p-2 mx-0">
                 <CardHeader className="flex flex-col gap-1 items-center sm:items-start w-full px-1 sm:px-4 pt-4 pb-0 ">
-                  <p className="text-sm sm:text-base max-sm:text-center font-medium leading-none max-lg:text-[12px]">
-                    Glory to ABBA
+                  <p className="text-sm sm:text-base font-bold leading-none max-lg:text-[12px]">
+                    {title}
                   </p>
                 </CardHeader>
-                <CardContent className=" px-1 sm:px-4 pt-0 pb-3 max-sm:hidden">
-                  <p className="text-left text-sm max-lg:[10px] text-gray-1 max-lg:text-[10px]">
-                    Praise be to Jehovah Nissi and Jehovah Jireh.
+                <CardContent className=" px-1 pt-2 sm:px-4 pb-3 flex flex-row items-center">
+                  <p className="text-left text-sm max-lg:[10px] text-gray-1 max-lg:text-[10px] w-[55%] ">
+                    {content}
                   </p>
+                  <div className=" flex-1 flex justify-end">
+                    <Image
+                      src={img}
+                      width={22}
+                      height={22}
+                      alt="Logo"
+                      className=" w-[60%] h-[60%] lg:w-[80%] lg:h-[80%]"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             </CarouselItem>
