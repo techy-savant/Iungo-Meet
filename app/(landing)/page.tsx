@@ -9,6 +9,7 @@ import LandingHome from "@/components/LandingHome";
 import Pricing from "@/components/Pricing";
 import { useRouter } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
+import Sectors from "@/components/Sectors";
 
 const LandingPage = () => {
   const router = useRouter();
@@ -30,6 +31,10 @@ const LandingPage = () => {
 
       <section className="sm:px-16 px-8 py-12 bg-white" id="features">
         <Features />
+      </section>
+
+      <section className="sm:px-16 px-8 py-12 bg-white pb-[80px]" id="sectors">
+        <Sectors />
       </section>
 
       <section className="sm:px-16 px-8 py-16 bg-dark-3">
