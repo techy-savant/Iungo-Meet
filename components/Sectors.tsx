@@ -23,7 +23,7 @@ interface sectorsDataType {
 const Sectors = () => {
   return (
     <section className="flex size-full flex-col sm:gap-2 items-center px-4">
-      <h2 className="  flex justify-center align-center text-base sm:text-2xl text-dark-1 font-semibold capitalize ">
+      <h2 className="  flex justify-center align-center text-base text-center sm:text-2xl text-dark-1 font-semibold capitalize ">
         Unifying Communication Across Sectors
       </h2>
 
@@ -52,7 +52,7 @@ const Sectors = () => {
                   </p>
                 </CardHeader>
                 <CardContent className=" px-1 pt-2 sm:px-4 pb-3 flex flex-row items-center">
-                  <p className="text-left text-sm max-lg:[10px] text-gray-1 max-lg:text-[10px] w-[55%] ">
+                  <p className="text-left text-sm max-lg:[10px] text-gray-1 max-lg:text-[10px] w-[65%] sm:w-[55%] ">
                     {content}
                   </p>
                   <div className=" flex-1 flex justify-end">
