@@ -52,11 +52,11 @@ const config = {
         yellow: {
           1: "#F9A90E",
         },
-		gray: {
-			'1': '#7d7d7d',
-			'2': '#fafafa',
-			'3': '#f5f5f5',
-		}
+        gray: {
+          "1": "#7d7d7d",
+          "2": "#fafafa",
+          "3": "#f5f5f5",
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -74,6 +74,9 @@ const config = {
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')",
+      },
+      screens: {
+        xs: "550px",
       },
     },
   },

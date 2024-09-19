@@ -137,3 +137,27 @@ export const HomeData = [
     Icon: LineChart,
   },
 ];
+
+export const faqData = [
+  {
+    sn: 1,
+    question: "Iungo Looks great. What is it?",
+    answer:
+      "Iungo is a virtual space and opensource videoconferencing solution where you and your remote team,class, agency... can work, collaborate and hang out together. Iungo makes spending time with your remote team fun, seamless and productive.",
+  },
+  {
+    sn: 2,
+    question: "How much does Iungo cost?",
+    answer: "Iungo is an OpenSource Product and at the moment is 100% free."
+  },
+  {
+    sn: 3,
+    question: "Is Iungo Secure?",
+    answer: "Yes. Each call is secure and well-encrypted, ensuring your conversations remain private and protected."
+  },
+  {
+    sn: 4,
+    question: "Can I record team meetings on Iungo?",
+    answer: "With Iungo you can record any meeting of your choice. Allowing you to capture every moment."
+  },
+];

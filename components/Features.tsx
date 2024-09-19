@@ -72,7 +72,7 @@ const Features = () => {
                 >
                   <Icon className="size-6" />
                 </div>
-                <p className="text-sm sm:text-base font-medium leading-none max-lg:text-[12px]">
+                <p className="text-sm sm:text-base max-sm:text-center font-medium leading-none max-lg:text-[12px]">
                   {title}
                 </p>
               </CardHeader>
