@@ -22,15 +22,14 @@ const Faq = () => {
       <p className=" text-xs sm:text-base text-gray-1 text-center max-w-[450px] ">
         Have questions? We've got answers. You can find what you're looking for.
       </p>
-
-      {faqData.map(({ sn, question, answer }: faqDataType) => (
-        <Accordion
-          key={sn}
-          type="single"
-          collapsible
-          className="w-full max-w-[600px] mt-5"
-        >
-          <AccordionItem value="item-1" className=" border-none shadow-sm px-2">
+      <Accordion
+        
+        type="single"
+        collapsible
+        className="w-full max-w-[600px] mt-5 border-none"
+      >
+        {faqData.map(({ sn, question, answer }: faqDataType) => (
+          <AccordionItem key={sn} value="item-1" className=" border-none shadow-sm px-2 mb-2">
             <AccordionTrigger className=" text-sm sm:text-base py-2 ">
               {question}
             </AccordionTrigger>
@@ -38,8 +37,8 @@ const Faq = () => {
               {answer}
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
-      ))}
+        ))}
+      </Accordion>
     </section>
   );
 };
