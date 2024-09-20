@@ -56,7 +56,7 @@ const LandingHome = () => {
       <div className=" grid grid-cols-2 lg:grid-cols-4 lg:gap-3 justify-around w-full">
         {HomeData.map(
           ({ title, Icon, mainContent, mobileContent }: HomeType) => (
-            <Card className="flex flex-col items-center m-4 max-sm:min-h-[80px] lg:w-full">
+            <Card key={title} className="flex flex-col items-center m-4 max-sm:min-h-[80px] lg:w-full">
               <CardHeader className="flex flex-row gap-2 justify-center items-center max-sm:p-2">
                 <Icon className="size-4 mt-2" />
 
