@@ -79,8 +79,8 @@ Follow these steps to set up the project locally on your machine.
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/techy-savant/IUNGO---Video-Conferencing-SaaS.git
-cd IUNGO---Video-Conferencing-SaaS
+git clone https://github.com/techy-savant/Iungo-Meet.git
+cd Iungo-Meet
 ```
 
 **Installation**
