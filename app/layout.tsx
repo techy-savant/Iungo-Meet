@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Palanquin, Montserrat } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
@@ -9,6 +9,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
+const palanquin = Palanquin({ subsets: ["latin"], weight: ["400", "700"] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Iungo Meet",
@@ -40,7 +42,7 @@ export default function RootLayout({
           },
         }}
       >
-        <body className={`${inter.className} bg-dark-2`}>
+        <body className={`${inter.className} bg-dark-2 scroll-smooth`}>
           {children}
           <Toaster />
         </body>
