@@ -47,23 +47,27 @@ const About = () => {
         <p className=" lowercase pl-1"> is about </p>
       </h2>
 
-      <div className=" flex gap-3 flex-wrap justify-center items-center w-full">
+      <div className=" grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 flex-wrap justify-center items-center max-xs:place-items-center w-full">
         {aboutsData.map(({ title, description, Icon, color }: aboutsType) => (
-          <Card key={title} className="flex flex-col items-start m-4 max-sm:min-h-[80px] max-w-[180px] lg:max-w-[350px]  gap-1 p-2 border-none flex-1">
-            <CardHeader className="flex flex-col gap-1 items-start px-4 pt-4 pb-0 ">
+          <Card
+            key={title}
+            className="flex flex-col items-start m-4 border-none bg-gray-2 min-h-[200px] max-sm:min-h-[120px] max-lg:min-h-[150px]  gap-1 p-2 flex-1  max-xs:w-fit  max-xs:items-center"
+          >
+            <CardHeader className="flex flex-col gap-1 items-center xs:items-start px-4 pt-4 pb-0 ">
               <div
                 className={cn(
-                  " rounded-md p-3 bg-yellow-1 opacity-[80%] flex justify-center items-left", color && `${color}`
+                  " rounded-md p-3 bg-yellow-1 opacity-[80%] flex justify-center items-left",
+                  color && `${color}`
                 )}
               >
                 <Icon className="size-5" />
               </div>
-              <p className="text-sm sm:text-base font-medium leading-none ">
+              <p className="text-sm sm:text-base font-medium leading-none max-xs:text-center">
                 {title}
               </p>
             </CardHeader>
             <CardContent className=" px-4 pt-0 pb-3">
-              <p className="text-left text-sm max-lg:[10px] text-gray-1">
+              <p className="text-left text-xs md:text-sm max-lg:[10px] text-gray-1 max-xs:text-center">
                 {description}
               </p>
             </CardContent>
