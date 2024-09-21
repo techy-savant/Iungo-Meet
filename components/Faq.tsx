@@ -25,12 +25,12 @@ const Faq = () => {
 
       {faqData.map(({ sn, question, answer }: faqDataType) => (
         <Accordion
+          key={sn}
           type="single"
           collapsible
           className="w-full max-w-[600px] mt-5 border-none"
         >
           <AccordionItem
-            key={sn}
             value="item-1"
             className=" border-none shadow-sm px-2 mb-2"
           >
