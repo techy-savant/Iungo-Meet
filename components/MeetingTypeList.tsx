@@ -95,7 +95,7 @@ const MeetingTypeList = () => {
         img="/icons/recordings.svg"
         title="View Recordings"
         description="Check Out your recordings"
-        handleClick={() => router.push("/recordings")}
+        handleClick={() => router.push("/dashboard/recordings")}
         className=" bg-red-1"
       />
       <HomeCard
